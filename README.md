@@ -2,6 +2,19 @@
 
 A modern note-taking application built with Jetpack Compose and following MVVM architecture pattern.
 
+## Known Issues
+
+```
+> Task :app:stripDebugDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so.
+> Task :app:stripReleaseDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so.
+> Task :app:hiltAggregateDepsDebug FAILED
+> Task :app:hiltAggregateDepsRelease FAILED
+```
+
+Currently experiencing issues with Hilt dependency aggregation. If you encounter these errors, please check the dependency compatibility between Hilt, JavaPoet, and your Gradle version.
+
 ## Overview
 
 JetNote2 is an Android application that allows users to create, read, update, and delete notes. The app is built using modern Android development practices including Jetpack Compose for UI, Room for data persistence, Hilt for dependency injection, and MVVM architecture.
@@ -63,15 +76,3 @@ git clone https://github.com/yourusername/JetNote2.git
 - Edit existing notes
 - Delete notes
 - Automatic date/time stamping of notes
-
-## License
-
-[Add your license information here]
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## Contact
-
-[Add your contact information here]
